@@ -1,0 +1,35 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: im-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.104:8848
+  datasource:
+    # mysql连接地址
+    url: jdbc:mysql://150.158.115.165:3306/erp_steels_admin?useUnicode=true&characterEncoding=UTF-8
+    # 用户名
+    username: root
+    # 密码
+    password: Mengnan2016!
+    # 数据库类型
+    platform: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    # redis数据库索引
+    database: 0
+    # redis ip
+    host: 150.158.115.165
+    # redis 端口
+    port: 6379
+    #   host: 60.168.131.134
+    #   port: 16379
+    pool:
+      # 连接超时时间 30秒
+      timeout: 30000
+    #password: 123456
+  jackson:
+    # 北京时区
+    time-zone: GMT+8
