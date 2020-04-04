@@ -6,7 +6,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.0.104:8848
+        server-addr: 127.0.0.1:8848
   datasource:
     # mysql连接地址
     url: jdbc:mysql://150.158.115.165:3306/erp_steels_admin?useUnicode=true&characterEncoding=UTF-8

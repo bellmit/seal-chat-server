@@ -1,6 +1,7 @@
-package com.mn.im.core.entity;
+package com.mn.im.core.vo;
 
-import com.mn.im.core.base.BaseEntity;
+import com.mn.im.core.common.utils.PageQuery;
+import com.mn.im.core.entity.MemberFriend;
 import lombok.Data;
 
 /**
@@ -10,7 +11,7 @@ import lombok.Data;
  * @date 2020-03-25
  */
 @Data
-public class MemberFriend extends BaseEntity<MemberFriend> {
+public class MemberFriendVo extends PageQuery<MemberFriend> {
 
     /**
      * @Fields  : 用户ID

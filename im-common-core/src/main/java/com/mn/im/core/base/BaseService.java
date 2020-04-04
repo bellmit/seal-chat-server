@@ -26,6 +26,9 @@ public abstract class BaseService<T extends AbstractBaseRepository, K extends Ba
     @Autowired
     protected T baseRepository;
 
+    @Autowired
+    protected RedisService redisService;
+
     /**
      * @Title:
      * @Description:   分页查询
@@ -66,6 +69,19 @@ public abstract class BaseService<T extends AbstractBaseRepository, K extends Ba
      */
     public int save(V v) {
         return this.baseRepository.insertData(v.getEntity());
+    }
+
+    /**
+     * @Title:
+     * @Description:   保存
+     * @param k
+     * @return
+     * @throws
+     * @author qiaomengnan
+     * @date 2020/01/04 09:55:50
+     */
+    public int save(K k) {
+        return this.baseRepository.insertData(k);
     }
 
     /**

@@ -5,30 +5,29 @@ import lombok.Data;
 
 /**
  * @author qiaomengnan
- * @ClassName: MemberFriend
- * @Description: 好友关系
- * @date 2020-03-25
+ * @ClassName: MemberFriendAsk
+ * @Description: 好友请求
+ * @date 2020-04-02
  */
 @Data
-public class MemberFriend extends BaseEntity<MemberFriend> {
+public class MemberFriendAsk extends BaseEntity<MemberFriendAsk> {
 
     /**
-     * @Fields  : 用户ID
+     * @Fields  : 请求方
      * @author qiaomengnan
      */
     private String memberId;
 
     /**
-     * @Fields  : 朋友ID
+     * @Fields  : 被请求方
      * @author qiaomengnan
      */
-    private String friendId;
+    private String askMemberId;
 
     /**
-     * @Fields  : 0. 正常好友 1. 已删除 2. 黑名单
+     * @Fields  : 状态 0.待通过 1.通过 2.拒绝 3.过期
      * @author qiaomengnan
      */
     private String status;
-
 
 }

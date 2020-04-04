@@ -1,0 +1,17 @@
+server:
+  port: 8998
+spring:
+  application:
+    name: im-common-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.104:8848
+    gateway:
+      routes:
+        - id: im-client
+          uri: lb://im-client
+          predicates:
+          - Path= /client/**
+          filters:
+          - StripPrefix=1

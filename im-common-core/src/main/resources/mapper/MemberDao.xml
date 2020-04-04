@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mn.im.core.dao.MemberDao">
+
+    <!--
+     查询会员
+     -->
+    <select id="selectVos" resultType="com.mn.im.core.vo.MemberVo" >
+        select
+            member.*
+        from member
+        where member.del_flag = ${delete_exist}
+        <!-- mobile -->
+        <if test="params.mobile != null">
+            and member.mobile = #{params.mobile}
+        </if>
+        order by member.update_time desc
+    </select>
+
+</mapper>

@@ -6,10 +6,18 @@
         <artifactId>im</artifactId>
         <groupId>com.mn.im</groupId>
         <version>1.0.1</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>im-server</artifactId>
+    <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.mn.im</groupId>
+            <artifactId>im-common-core</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
