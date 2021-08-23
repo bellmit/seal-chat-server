@@ -38,7 +38,7 @@
         <nacos-discovery.version>2.2.0.RELEASE</nacos-discovery.version>
         <im-common-core.version>1.0.1</im-common-core.version>
         <netty-socketio.version>1.7.18</netty-socketio.version>
-        <jsoup.version>1.13.1</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
     </properties>
 
 
